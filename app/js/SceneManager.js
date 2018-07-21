@@ -27,13 +27,13 @@ class SceneManager {
 
         // CAMERA
         this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 3000);
-        this.camera.position.set(0, -30, 5);
+        this.camera.position.set(0, -50, 30);
         this.scene.add(this.camera);
         this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
         THREEx.WindowResize(this.renderer, this.camera);
 
         // Background clear color
-        this.renderer.setClearColor(0xffffff, 1);
+        this.renderer.setClearColor(0x888888, 1);
         this.renderer.clear();
         this.scene.add(new THREE.HemisphereLight(0xffffff, 0x222222));
         // var grid = new THREE.GridHelper(50, 50);

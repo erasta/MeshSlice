@@ -17,7 +17,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js"></script>
 <script src="app/js/SceneManager.js"></script>
-<script src="app/js/AppProject.js"></script>
 <script src="app/js/AppSlice.js"></script>
 <script src="app/js/ProjectToMesh.js"></script>
 <script src="app/js/SegmentsClosestPoints.js"></script>
@@ -25,10 +24,7 @@
 <script src="app/js/MeshIntersectPlane.js"></script>
 <script src="app/js/MeshSlicer.js"></script>
 <script>
-const apps = ['Project', 'Slice'];
-const q = apps.indexOf(window.location.search.substr(1));
-if (q <= 0) new SceneManager(new AppProject());
-if (q == 1) new SceneManager(new AppSlice());
+new SceneManager(new AppSlice());
 </script>
 </body>
 </html>
